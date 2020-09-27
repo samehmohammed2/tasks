@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Daily Planner - Plan your day</title>
+  </head>
+  <body class="flex">
+    <aside class="flex">
+      <form id="formElem">
+        <h1>Add new task</h1>
+        <input id="plan" type="text" name="plan" placeholder="Enter your plan for today" />
+        <div>
+          <label for="priority">Select Priority</label>
+          <select name="priority" id="priority">
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
+          </select>
+        </div>
+        <input id="submit" type="submit" value="Add Task" />
+      </form>
+    </aside>
+    <main>
+      <h1>Tasks</h1>
+      <div id="remaining">
+        <h3>Remaining</h3>
+        <div id="remaining-tasks">
+          
+        </div>
+      </div>
+      <div id="completed">
+        <h3>Completed</h3>
+        <div id="completed-tasks">
+
+        </div>
+      </div>
+      </div>
+    </main>
+    
+  </body>
+</html>

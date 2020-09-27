@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+.flex {
+  display: flex;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  padding: 0 1.5em;
+  background-color: #393e46;
+  color: #eeeeee;
+  flex: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main h1 {
+  text-align: center;
+  grid-column: 1/-1;
+  font-size: 3.5rem;
+}
+
+#remaining,
+#completed {
+  min-height: 80vh;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 0 0.5em;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+.task-card {
+  width: 100%;
+  color: #222831;
+  border-radius: 10px;
+  margin: 1.5em 0;
+  padding: 0.5em 1.5em;
+  font-size: 1.15em;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.1s ease-in;
+}
+.task-card .flex {
+  margin-left: 1.5em;
+  width: 88px;
+  justify-content: space-between;
+}
+.task-card.p1 {
+  background-color: #fffcf6;
+}
+.task-card.p2 {
+  background-color: #efdfbb;
+}
+.task-card.p3 {
+  background-color: #eedc82;
+}
+#completed .task-card {
+  background-color: palegreen;
+}
+button {
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border: none;
+}
+
+#redo-btn {
+  border-radius: 5px;
+  background-color: #b2b2ff;
+}
+#redo-btn:hover {
+  background-color: #9999ff;
+}
+#completed-btn {
+  border-radius: 5px;
+  background-color: palegreen;
+}
+#completed-btn:hover {
+  background-color: lightgreen;
+}
+#delete-btn {
+  border-radius: 5px;
+  background-color: salmon;
+}
+#delete-btn:hover {
+  background-color: lightsalmon;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+aside {
+  min-height: 100vh;
+  flex: 2;
+  padding: 0 1.5em;
+  background-color: #32e0c4;
+  color: #222831;
+  align-items: flex-start;
+  justify-content: center;
+}
+form {
+  width: 90%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: #222831;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+form h1 {
+  font-size: 3.5rem;
+  color: #222831;
+}
+
+label {
+  font-size: 1.8rem;
+}
+input,
+select {
+  cursor: pointer;
+  background-color: #eeeeee;
+  color: #222831;
+  border-radius: 5px;
+  transition: all 0.1s ease-in;
+}
+input,
+form > div {
+  margin: 2em 0;
+}
+input[type='submit'] {
+  background-color: #222831;
+  color: #eeeeee;
+}
+select {
+  display: block;
+  margin-top: 1em;
+  padding: 0.5em 0.8em;
+}
+input[type='text'] {
+  width: 90%;
+  max-width: 500px;
+}
+input::placeholder {
+  color: #000;
+}
+input,
+select,
+input:focus {
+  text-align: left;
+  border: none;
+  padding: 1em 2em;
+}
+input:hover,
+select:hover,
+input:focus {
+  background-color: #393e46;
+  color: #eeeeee;
+}
+input:hover::placeholder,
+input:focus::placeholder {
+  color: #eeeeee;
+}
+
+@media only screen and (max-width: 1500px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    flex-direction: column;
+  }
+  aside,
+  main {
+    min-height: 50vh;
+  }
+  form {
+    margin: 2em 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 9px;
+  }
+  .task-card .flex {
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-gap: 2em 0;
+  }
+  #remaining,
+  #completed {
+    min-height: 30vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 8px;
+  }
+  .task-card .flex {
+    width: 50px;
+  }
+}
